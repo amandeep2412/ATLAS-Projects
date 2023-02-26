@@ -1,0 +1,53 @@
+Project has 2 roles -> Admin and User
+User
+    id, name, phone, email, password, address, department, type, lastUpdatedOn
+    
+    type: 1 -> Admin
+    type: 2 -> User i.e. Employee who should be using classifieds
+
+Category
+	id, title, lastUpdatedOn   
+    
+Classifieds
+	id, categoryId, status, headline, productName, brand, condition, description, price, pictures, lastUpdatedOn
+		status -> 0 pending
+		status -> 1 approved
+		status -> 2 rejected
+		status -> 3 -> sold :)
+		
+		condition -> Brand New(Seal Packed), Lightly Used, Moderately Used, Heavily Used, Damaged/Dented, Not Working
+	
+Order
+	id, classifiedId, fromUserId, toUserId, proposedPrice, status, lastUpdatedOn
+		status -> 0 requested for purchase
+		status -> 1 approved i.e. agreed to sell
+		status -> 2 rejected i.e. not interested to sell
+		status -> 3 payment processed :) -> Product sold :)
+
+Relationships
+	1 User can post many Classifieds
+	1 User can buy many products as listed in classifieds
+	1 User can have many Orders
+	
+
+MVC Architecture :)
+	1. MODEL -> Create Models, i.e. Classes and Tables in the database
+	2. VIEW  -> Create User Interface/Console Menu
+	3. CONTROLLER -> Create Logical Units i.e. Some Algos/Services etc..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
